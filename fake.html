@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img class="zz"src="">
+    <img class="yy"src="">
+    <img class="xx"src="">
+    <img class="ww"src="">
+    <!-- <img class="uu"src=""> -->
+
+    
+
+    <!-- <div class="ww"></div> -->
+    <script>
+
+        var div1=document.createElement("div")
+        document.body.appendChild(div1)
+        
+    var z=window.localStorage.getItem("image")
+    var imgg=document.getElementsByClassName("zz")
+
+imgg[0].setAttribute("src",z)
+imgg[0].style.width="200px"
+imgg[0].style.marginTop="50px"
+imgg[0].style.marginLeft="100px"
+
+div1.appendChild(imgg[0])
+var aa=window.localStorage.getItem("history")
+var bb=JSON.parse(aa)
+console.log(bb)
+
+var div2=document.createElement("div")
+document.body.appendChild(div2)
+div2.style.textAlign="center"
+div2.style.width="500px"
+div2.style.border="2px groove black"
+
+div2.style.marginLeft="400px"
+div2.style.marginTop="-320px"
+
+
+
+var h=document.createElement("h2")
+h.innerText=bb["id"]
+// document.body.appendChild(h)
+div2.appendChild(h)
+
+var h=document.createElement("h2")
+h.innerText=bb["title"]
+// document.body.appendChild(h)
+div2.appendChild(h)
+
+var h=document.createElement("h2")
+h.innerText=bb["price"]
+
+div2.appendChild(h)
+
+
+
+var h=document.createElement("h2")
+h.innerText=bb["category"]
+div2.appendChild(h)
+
+var h=document.createElement("h2")
+h.innerText=bb["rating"]["rate"]
+div2.appendChild(h)
+
+var h=document.createElement("h2")
+h.innerText=bb["rating"]["count"]
+div2.appendChild(h)
+
+var div3=document.createElement("div")
+ document.body.appendChild(div3)
+
+ var div4=document.createElement("div")
+ document.body.appendChild(div4)
+
+ var div5=document.createElement("div")
+ document.body.appendChild(div5)
+
+
+var img1=document.getElementsByClassName("yy")
+img1[0].setAttribute("src","./top1.jpg")
+div3.appendChild(img1[0])
+div3.style.display="inline"
+img1[0].style.width="220px"
+ img1[0].style.marginTop="100px"
+ img1[0].style.marginLeft="100px"
+ document.body.appendChild(img1[0])
+
+
+var img2=document.getElementsByClassName("xx")
+img2[0].setAttribute("src","./buds.webp")
+div4.appendChild(img2[0])
+div4.style.display="inline"
+img2[0].style.width="250px"
+document.body.appendChild(img2[0])
+
+
+var img3=document.getElementsByClassName("ww")
+img3[0].setAttribute("src","./hoodi.webp")
+div5.appendChild(img3[0])
+div5.style.display="inline"
+img3[0].style.width="180px"
+document.body.appendChild(img3[0])
+
+
+img1[0].addEventListener("click",function(){
+   
+
+   imgg[0].setAttribute("src","./top1.jpg")
+
+  imgg[0].style.width="230px"
+  imgg[0].style.marginLeft="100px"
+  imgg[0].style.marginTop="30px"
+
+
+
+})
+
+img2[0].addEventListener("click",function(){
+    imgg[0].setAttribute("src","./buds.webp")
+
+    imgg[0].style.width="270px"
+    imgg[0].style.marginLeft="100px"
+    imgg[0].style.marginTop="67px"
+
+
+  
+})
+
+img3[0].addEventListener("click",function(){
+    imgg[0].setAttribute("src","./hoodi.webp")
+    
+    imgg[0].style.width="230px"
+    imgg[0].style.marginLeft="100px"
+     imgg[0].style.marginTop="30px"
+
+   
+})
+    </script>
+</body>
+</html>
